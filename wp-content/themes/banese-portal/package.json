@@ -1,0 +1,22 @@
+{
+  "name": "banese-portal-theme",
+  "version": "1.0.0",
+  "description": "Tema para o Portal Banese",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Parati UID Estúdio",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-include": "^2.4.1",
+    "gulp-sass": "^5.0.0",
+    "node-sass": "^6.0.1",
+    "sass-math": "^1.0.0",
+    "swiper": "^7.0.8"
+  },
+  "dependencies": {}
+}

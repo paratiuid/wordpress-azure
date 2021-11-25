@@ -1,0 +1,11 @@
+@function __remcalc($value) {
+    $value: __clean-unit($value); // retirando unidade
+    $value: ($value / __clean-unit($font-size--default)) * 1rem;
+
+    @return $value;
+}
+
+@function __clean-unit($value) {
+    @return $value / ($value * 0 + 1);
+}
+@import "./_mixins/fontStyles"

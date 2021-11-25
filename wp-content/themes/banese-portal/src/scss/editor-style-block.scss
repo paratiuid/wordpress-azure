@@ -1,0 +1,54 @@
+@import "style";
+@mixin __font__editor {
+	font-family: $font-family--texts !important;
+	font-size: __remcalc($font-size--default) !important;
+}
+
+button, input, select, textarea,
+.acf-block-component .acf-block-fields,
+.components-notice {
+	@include __font__editor;
+}
+
+.editor-styles-wrapper {
+	@include __font__editor;
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	p {
+		font-size: unset;
+		margin: unset;
+		color: unset;
+		line-height: unset;
+		font-weight: unset;
+	}
+
+	a {
+		transition: unset;
+	}
+
+	.bp__banner_img {
+		z-index: revert;
+
+		position: relative;
+		&::before {
+			content: attr(data-url);
+		}
+
+	}
+}
+
+@media (min-width: 782px) {
+	.interface-interface-skeleton__secondary-sidebar, 
+	.interface-interface-skeleton__sidebar {
+		width: 25%;
+	}
+
+	.interface-complementary-area {
+		width: 100%;
+	}
+}

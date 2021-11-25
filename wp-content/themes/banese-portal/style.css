@@ -1,0 +1,17 @@
+@charset "UTF-8";
+/*
+Theme Name: Portal Banese
+Theme URI: 
+Author: Parati UID Studio
+Author URI: https://parati.ag/
+Description: Tema criado para dar suporte ao gerenciamento de conteúdo do Portal
+Requires at least: 4.9.6
+Requires PHP: 7.0.33
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: bp
+Tags: one-column, flexible-header, accessibility-ready, custom-colors, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, rtl-language-support, sticky-post, threaded-comments, translation-ready, block-patterns
+*/
+
+@import url("app.css");
