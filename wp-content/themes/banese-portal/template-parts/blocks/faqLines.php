@@ -34,7 +34,7 @@ if(! function_exists( 'strReplaceLine' )) {
 $faqLines = get_field('faqLines');
 ?>
 
-<section id="<?php echo esc_attr($id); ?>" class="bp__block <?php echo esc_attr($className); ?>">
+<section id="<?php echo esc_attr($id); ?>" class="bp__block bp__faq <?php echo esc_attr($className); ?>">
 	<div class="container">
 	<?php if( have_rows('faqLines') ): ?>
 		
@@ -43,14 +43,22 @@ $faqLines = get_field('faqLines');
 			<?php while( have_rows('faqLines') ): the_row();
 				?>
 
-				<?php if( have_rows('faq') ): ?>
-					<?php while( have_rows('faq') ): the_row();	
-					?>
-						<?php echo "<ul class='bp__faq'>" ?>
-						<?php include '_faq.php'; ?>
-						<?php echo "</ul>" ?>
-					<?php endwhile; ?>
-				<?php endif; ?>
+				<?php
+					$faqTitle = get_sub_field('faqTitle') ?: '';
+					$faqTitle = strReplaceLine($faqTitle);
+				?>
+
+				<h3 class="bp__faq_title"><?php echo $faqTitle ?></h3>
+
+				<?php echo "<ul class='bp__faq_list'>" ?>
+					<?php if( have_rows('faq') ): ?>
+						<?php while( have_rows('faq') ): the_row();	
+						?>
+							<?php include '_faq.php'; ?>
+							
+						<?php endwhile; ?>
+					<?php endif; ?>
+				<?php echo "</ul>" ?>
 			<?php endwhile; ?>
 			</div>
 		</div>

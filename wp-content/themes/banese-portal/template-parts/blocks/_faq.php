@@ -4,6 +4,6 @@
 ?>
 
 <li>
-	<a href=""><?php echo $faqQuestion ?></a>
-	<div><?php echo $faqAwnser ?></div>
+	<a href="javascript:;" class="bp__faq_question"><?php echo $faqQuestion ?></a>
+	<div class="bp__faq_awnser" style="display: none;"><?php echo $faqAwnser ?></div>
 </li>
